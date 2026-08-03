@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Gacén & Serra Dental</title>
+<script src="https://www.google.com/recaptcha/api.js?render=6LfH_nMtAAAAAF62WJnFNwFIgJhDXkE-t-UTzCHp"></script>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -791,7 +792,7 @@ footer{
             </div>
             <div class="citem-body">
               <strong>Dirección</strong>
-              <a href="https://maps.app.goo.gl/2rxocN5NFAgVJwDB9" target="_blank" rel="noopener" style="color:var(--gold);text-decoration:none;">Rambla Jaume I, N9<br>Cambrils, Tarragona</a>
+              <a href="https://maps.app.goo.gl/2rxocN5NFAgVJwDB9" target="_blank" rel="noopener" style="color:var(--gold);text-decoration:none;">Rambla Jaume I, N9<br>43850 Cambrils, Tarragona</a>
             </div>
           </div>
 
@@ -904,7 +905,7 @@ footer{
       <a href="#testimonios">Testimonios</a>
       <a href="#contacto">Contacto</a>
     </div>
-    <div class="footer-copy">© 2025 Gacén &amp; Serra Dental · Rambla Jaume I, N9, Cambrils, Tarragona</div>
+    <div class="footer-copy">© 2025 Gacén &amp; Serra Dental · Rambla Jaume I, N9, 43850 Cambrils, Tarragona</div>
   </div>
 </footer>
 
@@ -973,14 +974,20 @@ function handleSubmit(form, event) {
   btn.disabled = true;
   btnText.textContent = 'Enviando...';
 
-  // Construye la URL con los datos del formulario y la envía en segundo plano
-  const params = new URLSearchParams(new FormData(form));
-  fetch(form.action + '?' + params.toString(), { method: 'GET', mode: 'no-cors' })
-    .catch(() => {}) // no-cors no da estado de respuesta legible; asumimos éxito
-    .finally(() => {
-      form.style.display = 'none';
-      document.getElementById('formSuccess').style.display = 'block';
+  // Genera el token de reCAPTCHA v3 y luego envía el formulario con ese token incluido
+  grecaptcha.ready(function() {
+    grecaptcha.execute('6LfH_nMtAAAAAF62WJnFNwFIgJhDXkE-t-UTzCHp', { action: 'contacto' }).then(function(token) {
+      const params = new URLSearchParams(new FormData(form));
+      params.append('recaptcha_token', token);
+
+      fetch(form.action + '?' + params.toString(), { method: 'GET', mode: 'no-cors' })
+        .catch(() => {}) // no-cors no da estado de respuesta legible; asumimos éxito
+        .finally(() => {
+          form.style.display = 'none';
+          document.getElementById('formSuccess').style.display = 'block';
+        });
     });
+  });
 
   return false;
 }
