@@ -102,24 +102,24 @@ nav.scrolled{box-shadow:0 2px 24px rgba(0,0,0,.07);padding:14px 52px}
   font-size:10px;font-weight:400;letter-spacing:5px;text-transform:uppercase;
   color:var(--gold);margin-bottom:30px;
   display:flex;align-items:center;gap:16px;
-  opacity:0;animation:fadeUp .8s ease .2s forwards;
+  opacity:0;-webkit-animation:fadeUp .8s ease .2s forwards;animation:fadeUp .8s ease .2s forwards;
 }
 .hero-eyebrow::before{content:'';width:36px;height:1px;background:var(--gold)}
 h1.hero-title{
   font-family:'Cormorant Garamond',serif;
   font-size:clamp(50px,5.5vw,80px);font-weight:300;line-height:1.05;
   color:var(--white);margin-bottom:30px;
-  opacity:0;animation:fadeUp .8s ease .4s forwards;
+  opacity:0;-webkit-animation:fadeUp .8s ease .4s forwards;animation:fadeUp .8s ease .4s forwards;
 }
 h1.hero-title em{font-style:italic;color:var(--gold);display:block}
 .hero-desc{
   font-size:15px;font-weight:300;line-height:1.9;
   color:rgba(255,255,255,.55);max-width:380px;margin-bottom:50px;
-  opacity:0;animation:fadeUp .8s ease .6s forwards;
+  opacity:0;-webkit-animation:fadeUp .8s ease .6s forwards;animation:fadeUp .8s ease .6s forwards;
 }
 .hero-actions{
   display:flex;gap:16px;align-items:center;
-  opacity:0;animation:fadeUp .8s ease .8s forwards;
+  opacity:0;-webkit-animation:fadeUp .8s ease .8s forwards;animation:fadeUp .8s ease .8s forwards;
 }
 .btn-primary{
   background:var(--gold);color:var(--white);
@@ -140,7 +140,7 @@ h1.hero-title em{font-style:italic;color:var(--gold);display:block}
 .btn-ghost:hover::after{transform:translateX(4px)}
 .hero-right{
   position:relative;overflow:hidden;
-  opacity:0;animation:fadeIn 1.2s ease .3s forwards;
+  opacity:0;-webkit-animation:fadeIn 1.2s ease .3s forwards;animation:fadeIn 1.2s ease .3s forwards;
 }
 .hero-image-bg{
   width:100%;height:100%;
@@ -459,12 +459,14 @@ footer{
 .footer-copy{font-size:10px;font-weight:300;color:rgba(255,255,255,.18);letter-spacing:.8px}
 
 /* ANIMATIONS */
+@-webkit-keyframes fadeUp{from{opacity:0;-webkit-transform:translateY(24px);transform:translateY(24px)}to{opacity:1;-webkit-transform:translateY(0);transform:translateY(0)}}
 @keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+@-webkit-keyframes fadeIn{from{opacity:0}to{opacity:1}}
 @keyframes fadeIn{from{opacity:0}to{opacity:1}}
-.reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}
-.reveal.visible{opacity:1;transform:translateY(0)}
-.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}
-.d4{transition-delay:.4s}.d5{transition-delay:.5s}
+.reveal{opacity:0;-webkit-transform:translateY(28px);transform:translateY(28px);-webkit-transition:opacity .7s ease,-webkit-transform .7s ease;transition:opacity .7s ease,transform .7s ease}
+.reveal.visible{opacity:1;-webkit-transform:translateY(0);transform:translateY(0)}
+.d1{-webkit-transition-delay:.1s;transition-delay:.1s}.d2{-webkit-transition-delay:.2s;transition-delay:.2s}.d3{-webkit-transition-delay:.3s;transition-delay:.3s}
+.d4{-webkit-transition-delay:.4s;transition-delay:.4s}.d5{-webkit-transition-delay:.5s;transition-delay:.5s}
 
 /* RESPONSIVE */
 @media(max-width:1024px){
@@ -730,6 +732,45 @@ footer{
         </div>
       </div>
 
+      <div class="test-card reveal d1">
+        <span class="quote-mark">"</span>
+        <span class="stars">★★★★★</span>
+        <blockquote>1ª visita con la Dra. Carolina Gacén. Trato super agradable y profesional. Supo dar solución a mis problemas bucales de forma rápida y eficiente. Relación calidad-precio super recomendable. Precios razonables. Volveré para realizarme varios tratamientos.</blockquote>
+        <div class="test-author">
+          <div class="author-av">LA</div>
+          <div class="author-info">
+            <strong>Lucila Aparicio</strong>
+            <span>Reseña en Google Maps</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="test-card reveal d2">
+        <span class="quote-mark">"</span>
+        <span class="stars">★★★★★</span>
+        <blockquote>Llegué con muchísimo miedo al dentista después de varias malas experiencias. Gracias a Carol, todo eso empezó a cambiar. Ha ido salvando piezas con una profesionalidad increíble. Es sincera, clara y te explica todo tal cual es. Me ha hecho perder el miedo al dentista. Y eso no tiene precio.</blockquote>
+        <div class="test-author">
+          <div class="author-av">G</div>
+          <div class="author-info">
+            <strong>Paciente de Google</strong>
+            <span>Reseña en Google Maps</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="test-card reveal d3">
+        <span class="quote-mark">"</span>
+        <span class="stars">★★★★★</span>
+        <blockquote>Encantada con el trato. Carol, una gran profesional que te explica al detalle cada proceso. Con empatía y delicadeza, transmite una gran confianza. ¡Es un 10! Recomendable 100%.</blockquote>
+        <div class="test-author">
+          <div class="author-av">YS</div>
+          <div class="author-info">
+            <strong>Yolanda Sánchez</strong>
+            <span>Reseña en Google Maps</span>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
@@ -750,7 +791,7 @@ footer{
             </div>
             <div class="citem-body">
               <strong>Dirección</strong>
-              <span>Rambla Jaume I, N9</span>
+              <a href="https://maps.app.goo.gl/2rxocN5NFAgVJwDB9" target="_blank" rel="noopener" style="color:var(--gold);text-decoration:none;">Rambla Jaume I, N9<br>Cambrils, Tarragona</a>
             </div>
           </div>
 
@@ -790,7 +831,12 @@ footer{
       <div class="contact-form reveal d2">
         <div class="form-heading">Pide tu cita</div>
         <p class="form-sub">Rellena el formulario y te llamamos para confirmar horario.</p>
-        <form id="contactForm" action="https://hook.eu1.make.com/s2qmlulthesa9hyfsxq19jdf8r5y6gfr" method="GET" target="_blank" onsubmit="handleSubmit(this)">
+        <form id="contactForm" action="https://hook.eu1.make.com/s2qmlulthesa9hyfsxq19jdf8r5y6gfr" method="GET" onsubmit="return handleSubmit(this, event)">
+        <div style="position:absolute;left:-9999px;top:-9999px;" aria-hidden="true">
+          <label for="website">No rellenar este campo</label>
+          <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+        </div>
+        <input type="hidden" id="form_loaded_at" name="form_loaded_at" value="">
         <div class="frow">
           <div class="fgroup">
             <label>Nombre</label>
@@ -834,6 +880,11 @@ footer{
         </div>
         <button class="btn-submit" type="submit"><span>Solicitar Cita</span></button>
         </form>
+        <div id="formSuccess" style="display:none;text-align:center;padding:20px 10px;">
+          <div style="font-size:40px;color:var(--gold);margin-bottom:10px;">✓</div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:400;color:var(--charcoal);margin-bottom:8px;">¡Gracias por tu solicitud!</div>
+          <p style="font-size:14px;font-weight:300;color:var(--muted);line-height:1.6;">Hemos recibido tu petición de cita. Nos pondremos en contacto contigo muy pronto para confirmar día y hora.</p>
+        </div>
         <a href="https://wa.me/34610830742" class="btn-whatsapp" target="_blank">
           <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
           Contactar por WhatsApp
@@ -853,17 +904,22 @@ footer{
       <a href="#testimonios">Testimonios</a>
       <a href="#contacto">Contacto</a>
     </div>
-    <div class="footer-copy">© 2025 Gacén &amp; Serra Dental · Rambla Jaume I, N9</div>
+    <div class="footer-copy">© 2025 Gacén &amp; Serra Dental · Rambla Jaume I, N9, Cambrils, Tarragona</div>
   </div>
 </footer>
 
 <script>
 // Reveal on scroll
 const reveals = document.querySelectorAll('.reveal');
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
-}, { threshold: 0.1 });
-reveals.forEach(r => observer.observe(r));
+if ('IntersectionObserver' in window) {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.1 });
+  reveals.forEach(r => observer.observe(r));
+} else {
+  // Fallback: show all elements immediately
+  reveals.forEach(r => r.classList.add('visible'));
+}
 
 // Nav scroll effect
 window.addEventListener('scroll', () => {
@@ -892,14 +948,41 @@ document.querySelector('.hamburger').addEventListener('click', function() {
   }
 });
 
-function handleSubmit(form) {
-  const btn = form.querySelector('.btn-submit span');
-  btn.textContent = '✓ Solicitud enviada';
-  setTimeout(() => {
-    form.reset();
-    btn.textContent = 'Solicitar Cita';
-  }, 4000);
-  return true;
+// Marca la hora en que se cargó el formulario (protección anti-bot)
+document.getElementById('form_loaded_at').value = Date.now();
+
+function handleSubmit(form, event) {
+  event.preventDefault();
+
+  // Anti-bot: campo honeypot relleno = bot
+  const honeypot = form.querySelector('#website').value;
+  // Anti-bot: envío en menos de 3 segundos = bot
+  const loadedAt = parseInt(form.querySelector('#form_loaded_at').value, 10);
+  const elapsed = Date.now() - loadedAt;
+
+  if (honeypot !== '' || elapsed < 3000) {
+    // Bloquea el envío silenciosamente, sin dar pistas al bot
+    return false;
+  }
+
+  const btn = form.querySelector('.btn-submit');
+  const btnText = btn.querySelector('span');
+
+  // Evita envíos múltiples
+  if (btn.disabled) return false;
+  btn.disabled = true;
+  btnText.textContent = 'Enviando...';
+
+  // Construye la URL con los datos del formulario y la envía en segundo plano
+  const params = new URLSearchParams(new FormData(form));
+  fetch(form.action + '?' + params.toString(), { method: 'GET', mode: 'no-cors' })
+    .catch(() => {}) // no-cors no da estado de respuesta legible; asumimos éxito
+    .finally(() => {
+      form.style.display = 'none';
+      document.getElementById('formSuccess').style.display = 'block';
+    });
+
+  return false;
 }
 </script>
 </body>
