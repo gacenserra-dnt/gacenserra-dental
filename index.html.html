@@ -315,86 +315,49 @@ section{padding:110px 0}
   position:absolute;top:0;left:0;right:0;height:6px;
   background:linear-gradient(90deg,var(--gold),var(--gold-light),var(--gold));
 }
-.test-header{text-align:center;margin-bottom:52px}
+.test-header{text-align:center;margin-bottom:72px}
 .test-header .section-label{justify-content:center}
 .test-header .section-label::before{display:none}
 .test-header p{
   color:var(--muted);font-size:15px;line-height:1.8;
-  max-width:520px;margin:14px auto 0;font-weight:300;
+  max-width:420px;margin:14px auto 0;font-weight:300;
 }
-.reviews-summary{
-  display:flex;align-items:center;justify-content:center;gap:12px;
-  margin-top:20px;flex-wrap:wrap;
-}
-.reviews-summary .stars{margin:0;font-size:17px}
-.reviews-summary span:last-child{font-size:12px;color:var(--muted);letter-spacing:.6px}
-.reviews-carousel{position:relative}
-.reviews-viewport{overflow:hidden;padding:10px 4px 24px}
-.reviews-track{display:flex;transition:transform .55s cubic-bezier(.22,.61,.36,1)}
-.review-slide{flex:0 0 33.333333%;padding:0 10px;display:flex}
+.test-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
 .test-card{
-  width:100%;background:var(--white);border:1px solid rgba(184,154,74,.15);
-  border-radius:4px;padding:40px 34px;position:relative;
+  background:var(--white);border:1px solid rgba(184,154,74,.15);
+  border-radius:4px;
+  padding:44px 38px;position:relative;
   transition:border-color .3s,box-shadow .3s,transform .25s;
-  box-shadow:0 2px 16px rgba(0,0,0,.04);display:flex;flex-direction:column;
+  box-shadow:0 2px 16px rgba(0,0,0,.04);
 }
 .test-card:hover{
   border-color:rgba(184,154,74,.35);
-  box-shadow:0 8px 40px rgba(184,154,74,.1);transform:translateY(-3px);
+  box-shadow:0 8px 40px rgba(184,154,74,.1);
+  transform:translateY(-3px);
 }
-.google-badge{
-  position:absolute;top:20px;right:20px;display:inline-flex;align-items:center;gap:5px;
-  padding:6px 8px;background:var(--cream);border:1px solid rgba(184,154,74,.18);
-  border-radius:20px;font-size:8px;font-weight:500;letter-spacing:1px;text-transform:uppercase;color:var(--muted);
-}
-.google-g{font-weight:600;font-size:12px;color:var(--gold)}
 .quote-mark{
   font-family:'Cormorant Garamond',serif;font-size:64px;font-weight:300;
-  color:var(--gold);line-height:.5;margin-bottom:22px;display:block;opacity:.3;
+  color:var(--gold);line-height:.5;margin-bottom:24px;
+  display:block;opacity:.3;
 }
 .stars{color:var(--gold);font-size:13px;letter-spacing:3px;margin-bottom:16px;display:block}
-.review-text{
-  font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:300;
-  font-style:italic;color:var(--charcoal);line-height:1.62;margin-bottom:16px;
-  display:-webkit-box;-webkit-line-clamp:8;-webkit-box-orient:vertical;overflow:hidden;
-}
-.review-text.expanded{display:block}
-.review-more{
-  align-self:flex-start;background:none;border:none;padding:0;margin:0 0 24px;
-  color:var(--gold);font-family:'Jost',sans-serif;font-size:9px;font-weight:500;
-  letter-spacing:1.5px;text-transform:uppercase;cursor:pointer;
+.test-card blockquote{
+  font-family:'Cormorant Garamond',serif;font-size:19px;font-weight:300;
+  font-style:italic;color:var(--charcoal);line-height:1.65;margin-bottom:30px;
 }
 .test-author{
-  display:flex;align-items:center;gap:14px;border-top:1px solid rgba(0,0,0,.06);
-  padding-top:20px;margin-top:auto;
+  display:flex;align-items:center;gap:14px;
+  border-top:1px solid rgba(0,0,0,.06);padding-top:22px;
 }
 .author-av{
   width:42px;height:42px;border-radius:50%;flex-shrink:0;
   background:linear-gradient(135deg,var(--gold),var(--gold-light));
   display:flex;align-items:center;justify-content:center;
-  font-family:'Cormorant Garamond',serif;font-size:15px;font-weight:600;color:var(--white);
+  font-family:'Cormorant Garamond',serif;font-size:15px;font-weight:600;
+  color:var(--white);
 }
 .author-info strong{display:block;font-size:13.5px;font-weight:400;color:var(--charcoal)}
 .author-info span{font-size:10px;font-weight:300;color:var(--muted);letter-spacing:1px}
-.carousel-arrow{
-  position:absolute;top:50%;transform:translateY(-50%);z-index:4;
-  width:44px;height:44px;border-radius:50%;border:1px solid rgba(184,154,74,.3);
-  background:rgba(255,255,255,.96);color:var(--gold);font-size:22px;cursor:pointer;
-  box-shadow:0 5px 24px rgba(0,0,0,.08);transition:.25s;
-}
-.carousel-arrow:hover{background:var(--gold);color:var(--white)}
-.carousel-prev{left:-18px}.carousel-next{right:-18px}
-.carousel-dots{display:flex;justify-content:center;gap:9px;margin-top:10px}
-.carousel-dot{width:7px;height:7px;border-radius:50%;border:0;background:rgba(184,154,74,.25);cursor:pointer;padding:0;transition:.25s}
-.carousel-dot.active{width:24px;border-radius:10px;background:var(--gold)}
-.reviews-footer{text-align:center;margin-top:34px}
-.btn-google{
-  display:inline-flex;align-items:center;justify-content:center;gap:10px;
-  background:var(--charcoal);color:var(--white);padding:15px 28px;border-radius:2px;
-  text-decoration:none;font-size:10px;font-weight:500;letter-spacing:2px;text-transform:uppercase;
-  transition:background .3s,transform .2s;
-}
-.btn-google:hover{background:var(--gold);transform:translateY(-1px)}
 
 /* CONTACTO */
 #contacto{
@@ -472,30 +435,6 @@ textarea{resize:vertical;min-height:90px}
 .btn-whatsapp:hover{background:#1db954}
 .btn-whatsapp svg{width:16px;height:16px;fill:var(--white)}
 
-.form-status{
-  display:none;text-align:center;padding:38px 24px;border-radius:4px;
-  background:var(--cream);border:1px solid rgba(184,154,74,.28);
-}
-.form-status.show{display:block}
-.form-status-icon{
-  width:64px;height:64px;margin:0 auto 18px;border-radius:50%;
-  display:flex;align-items:center;justify-content:center;
-  background:var(--gold);color:var(--white);font-size:34px;line-height:1;
-}
-.form-status h3{
-  font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:400;
-  color:var(--charcoal);margin-bottom:10px;
-}
-.form-status p{font-size:14px;color:var(--muted);line-height:1.7;margin-bottom:20px}
-.form-status .btn-whatsapp{max-width:320px;margin:0 auto}
-.form-error{
-  display:none;margin-top:12px;padding:12px 14px;border-radius:3px;
-  background:#fff1f1;color:#9d2a2a;font-size:13px;line-height:1.5;
-  border:1px solid rgba(157,42,42,.18);
-}
-.form-error.show{display:block}
-.btn-submit:disabled{opacity:.7;cursor:not-allowed}
-
 /* FOOTER */
 footer{
   background:var(--black);padding:52px 0 32px;
@@ -535,7 +474,7 @@ footer{
   .hero-right{display:none}
   .hero-left{padding:140px 48px 100px}
   .services-grid{grid-template-columns:repeat(2,1fr)}
-  .review-slide{flex-basis:50%}
+  .test-grid{grid-template-columns:repeat(2,1fr)}
   .about-grid,.contact-grid{grid-template-columns:1fr;gap:60px}
   .strip-inner{justify-content:center}
 }
@@ -546,11 +485,7 @@ footer{
   .container{padding:0 24px}
   section{padding:80px 0}
   .hero-left{padding:120px 24px 80px}
-  .services-grid{grid-template-columns:1fr}
-  .review-slide{flex-basis:100%;padding:0 4px}
-  .carousel-prev{left:-8px}.carousel-next{right:-8px}
-  .carousel-arrow{width:38px;height:38px}
-  .test-card{padding:36px 28px}
+  .services-grid,.test-grid{grid-template-columns:1fr}
   .frow{grid-template-columns:1fr}
   .footer-inner{flex-direction:column;text-align:center}
   .footer-links{justify-content:center}
@@ -754,163 +689,88 @@ footer{
     <div class="test-header reveal">
       <div class="section-label">Opiniones</div>
       <h2 class="section-title">Lo que dicen <em>nuestros pacientes</em></h2>
-      <p>Experiencias reales de pacientes que han confiado su sonrisa a nuestro equipo.</p>
-      <div class="reviews-summary"><span class="stars">★★★★★</span><span>Reseñas de pacientes en Google</span></div>
+      <p>La confianza de quienes nos eligen es nuestra mayor satisfacción.</p>
     </div>
-    <div class="reviews-carousel reveal" id="reviewsCarousel" aria-label="Reseñas de pacientes">
-      <button class="carousel-arrow carousel-prev" type="button" aria-label="Reseñas anteriores">‹</button>
-      <div class="reviews-viewport">
-        <div class="reviews-track">
-        <div class="review-slide">
-          <article class="test-card">
-            <span class="google-badge"><span class="google-g">G</span> Google</span>
-            <span class="quote-mark">&quot;</span>
-            <span class="stars" aria-label="5 estrellas">★★★★★</span>
-            <blockquote class="review-text">Desde el primer momento me trataron con una amabilidad increíble. El resultado de mi ortodoncia superó todas mis expectativas. ¡100% recomendable!</blockquote>
-            <button class="review-more" type="button" aria-expanded="false">Leer reseña completa</button>
-            <div class="test-author">
-              <div class="author-av">ML</div>
-              <div class="author-info"><strong>María L.</strong><span>Paciente · Ortodoncia</span></div>
-            </div>
-          </article>
-        </div>
-        <div class="review-slide">
-          <article class="test-card">
-            <span class="google-badge"><span class="google-g">G</span> Google</span>
-            <span class="quote-mark">&quot;</span>
-            <span class="stars" aria-label="5 estrellas">★★★★★</span>
-            <blockquote class="review-text">Tenía mucho miedo al dentista y aquí me hicieron sentir completamente tranquilo. El implante fue perfecto y sin dolor. Me han cambiado la vida.</blockquote>
-            <button class="review-more" type="button" aria-expanded="false">Leer reseña completa</button>
-            <div class="test-author">
-              <div class="author-av">JP</div>
-              <div class="author-info"><strong>Jordi P.</strong><span>Paciente · Implantes</span></div>
-            </div>
-          </article>
-        </div>
-        <div class="review-slide">
-          <article class="test-card">
-            <span class="google-badge"><span class="google-g">G</span> Google</span>
-            <span class="quote-mark">&quot;</span>
-            <span class="stars" aria-label="5 estrellas">★★★★★</span>
-            <blockquote class="review-text">Llevo a mis hijos desde pequeños y siempre hemos recibido una atención excelente. Un equipo profesional y cercano de verdad. No cambiaría de clínica.</blockquote>
-            <button class="review-more" type="button" aria-expanded="false">Leer reseña completa</button>
-            <div class="test-author">
-              <div class="author-av">CR</div>
-              <div class="author-info"><strong>Carmen R.</strong><span>Paciente · Odontopediatría</span></div>
-            </div>
-          </article>
-        </div>
-        <div class="review-slide">
-          <article class="test-card">
-            <span class="google-badge"><span class="google-g">G</span> Google</span>
-            <span class="quote-mark">&quot;</span>
-            <span class="stars" aria-label="5 estrellas">★★★★★</span>
-            <blockquote class="review-text">1ª visita con la Dra. Carolina Gacén. Trato super agradable y profesional. Supo dar solución a mis problemas bucales de forma rápida y eficiente. Relación calidad-precio super recomendable. Precios razonables. Volveré para realizarme varios tratamientos.</blockquote>
-            <button class="review-more" type="button" aria-expanded="false">Leer reseña completa</button>
-            <div class="test-author">
-              <div class="author-av">LA</div>
-              <div class="author-info"><strong>Lucila Aparicio</strong><span>Reseña en Google Maps</span></div>
-            </div>
-          </article>
-        </div>
-        <div class="review-slide">
-          <article class="test-card">
-            <span class="google-badge"><span class="google-g">G</span> Google</span>
-            <span class="quote-mark">&quot;</span>
-            <span class="stars" aria-label="5 estrellas">★★★★★</span>
-            <blockquote class="review-text">Llegué con muchísimo miedo al dentista después de varias malas experiencias. Gracias a Carol, todo eso empezó a cambiar. Ha ido salvando piezas con una profesionalidad increíble. Es sincera, clara y te explica todo tal cual es. Me ha hecho perder el miedo al dentista. Y eso no tiene precio.</blockquote>
-            <button class="review-more" type="button" aria-expanded="false">Leer reseña completa</button>
-            <div class="test-author">
-              <div class="author-av">G</div>
-              <div class="author-info"><strong>Paciente de Google</strong><span>Reseña en Google Maps</span></div>
-            </div>
-          </article>
-        </div>
-        <div class="review-slide">
-          <article class="test-card">
-            <span class="google-badge"><span class="google-g">G</span> Google</span>
-            <span class="quote-mark">&quot;</span>
-            <span class="stars" aria-label="5 estrellas">★★★★★</span>
-            <blockquote class="review-text">Encantada con el trato. Carol, una gran profesional que te explica al detalle cada proceso. Con empatía y delicadeza, transmite una gran confianza. ¡Es un 10! Recomendable 100%.</blockquote>
-            <button class="review-more" type="button" aria-expanded="false">Leer reseña completa</button>
-            <div class="test-author">
-              <div class="author-av">YS</div>
-              <div class="author-info"><strong>Yolanda Sánchez</strong><span>Reseña en Google Maps</span></div>
-            </div>
-          </article>
-        </div>
-        <div class="review-slide">
-          <article class="test-card">
-            <span class="google-badge"><span class="google-g">G</span> Google</span>
-            <span class="quote-mark">&quot;</span>
-            <span class="stars" aria-label="5 estrellas">★★★★★</span>
-            <blockquote class="review-text">Estoy súper agradecido con la Dr. Gacén &amp; Serra, tuve que ir de urgencia un martes a las 21h de la noche y no dudaron en atenderme, han sido súper agradables y profesionales, se nota que tienen vocación por ayudar al paciente, es una suerte haber encontrado su clínica. No dudaré en recomendarla.</blockquote>
-            <button class="review-more" type="button" aria-expanded="false">Leer reseña completa</button>
-            <div class="test-author">
-              <div class="author-av">RG</div>
-              <div class="author-info"><strong>Rubén Gamero</strong><span>Reseña en Google Maps</span></div>
-            </div>
-          </article>
-        </div>
-        <div class="review-slide">
-          <article class="test-card">
-            <span class="google-badge"><span class="google-g">G</span> Google</span>
-            <span class="quote-mark">&quot;</span>
-            <span class="stars" aria-label="5 estrellas">★★★★★</span>
-            <blockquote class="review-text">Solo puedo darles las gracias. Desde el primer momento el trato ha sido increíble, cercanas, amables y muy profesionales. Se nota cuando alguien hace su trabajo con cariño y se preocupa de verdad por las personas. Nos ayudaron muchísimo en un momento complicado y han estado pendientes. Da muchísima tranquilidad encontrar un equipo así. ¡Sin duda, una clínica totalmente recomendable! Ya va a ser la nuestra de confianza :)</blockquote>
-            <button class="review-more" type="button" aria-expanded="false">Leer reseña completa</button>
-            <div class="test-author">
-              <div class="author-av">AC</div>
-              <div class="author-info"><strong>Adriana Campos</strong><span>Reseña en Google Maps</span></div>
-            </div>
-          </article>
-        </div>
-        <div class="review-slide">
-          <article class="test-card">
-            <span class="google-badge"><span class="google-g">G</span> Google</span>
-            <span class="quote-mark">&quot;</span>
-            <span class="stars" aria-label="5 estrellas">★★★★★</span>
-            <blockquote class="review-text">Por fin he encontrado mi clínica dental favorita. Una atención inmejorable, un trato como de casa y unas manos increíbles. Tanto mi hijo como yo estamos encantados. ¡Por muchos años! Os deseamos lo mejor.</blockquote>
-            <button class="review-more" type="button" aria-expanded="false">Leer reseña completa</button>
-            <div class="test-author">
-              <div class="author-av">RC</div>
-              <div class="author-info"><strong>Raquel Chaparro García</strong><span>Reseña en Google Maps</span></div>
-            </div>
-          </article>
-        </div>
-        <div class="review-slide">
-          <article class="test-card">
-            <span class="google-badge"><span class="google-g">G</span> Google</span>
-            <span class="quote-mark">&quot;</span>
-            <span class="stars" aria-label="5 estrellas">★★★★★</span>
-            <blockquote class="review-text">Me recomendaron esta clínica y ahora soy quien os la recomienda. Puedo deciros que ya he encontrado mi clínica de confianza.</blockquote>
-            <button class="review-more" type="button" aria-expanded="false">Leer reseña completa</button>
-            <div class="test-author">
-              <div class="author-av">IM</div>
-              <div class="author-info"><strong>Iván Martínez Gavaldà</strong><span>Reseña en Google Maps</span></div>
-            </div>
-          </article>
-        </div>
-        <div class="review-slide">
-          <article class="test-card">
-            <span class="google-badge"><span class="google-g">G</span> Google</span>
-            <span class="quote-mark">&quot;</span>
-            <span class="stars" aria-label="5 estrellas">★★★★★</span>
-            <blockquote class="review-text">Como turista francesa de vacaciones en España, tuve la suerte de descubrir esta clínica dental tras sufrir un problema dental. Pude conseguir cita para el día siguiente, lo cual fue un gran alivio. Todo salió a la perfección. Todo el equipo es encantador, muy profesional e increíblemente delicado. Se nota enseguida que trabajan con gran calma, precisión y amabilidad. ¡No sentí nada durante el tratamiento! Estoy realmente muy contenta de haber encontrado esta clínica dental. Probablemente me salvaron el resto de las vacaciones y evitaron que terminara mi viaje con un fuerte dolor de muelas. Muchísimas gracias a todo el equipo por su cálida bienvenida, su amabilidad y la calidad de su atención. Les deseo mucho éxito con su nueva clínica; ¡se lo merecen! ¡Gracias de nuevo y mis mejores deseos para todo el equipo!</blockquote>
-            <button class="review-more" type="button" aria-expanded="false">Leer reseña completa</button>
-            <div class="test-author">
-              <div class="author-av">PF</div>
-              <div class="author-info"><strong>Paciente francesa</strong><span>Reseña en Google Maps</span></div>
-            </div>
-          </article>
-        </div>
+    <div class="test-grid">
+
+      <div class="test-card reveal d1">
+        <span class="quote-mark">"</span>
+        <span class="stars">★★★★★</span>
+        <blockquote>Desde el primer momento me trataron con una amabilidad increíble. El resultado de mi ortodoncia superó todas mis expectativas. ¡100% recomendable!</blockquote>
+        <div class="test-author">
+          <div class="author-av">ML</div>
+          <div class="author-info">
+            <strong>María L.</strong>
+            <span>Paciente · Ortodoncia</span>
+          </div>
         </div>
       </div>
-      <button class="carousel-arrow carousel-next" type="button" aria-label="Reseñas siguientes">›</button>
-      <div class="carousel-dots" aria-label="Páginas de reseñas"></div>
-    </div>
-    <div class="reviews-footer reveal">
-      <a href="https://maps.app.goo.gl/2rxocN5NFAgVJwDB9" class="btn-google" target="_blank" rel="noopener">Ver todas las reseñas en Google</a>
+
+      <div class="test-card reveal d2">
+        <span class="quote-mark">"</span>
+        <span class="stars">★★★★★</span>
+        <blockquote>Tenía mucho miedo al dentista y aquí me hicieron sentir completamente tranquilo. El implante fue perfecto y sin dolor. Me han cambiado la vida.</blockquote>
+        <div class="test-author">
+          <div class="author-av">JP</div>
+          <div class="author-info">
+            <strong>Jordi P.</strong>
+            <span>Paciente · Implantes</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="test-card reveal d3">
+        <span class="quote-mark">"</span>
+        <span class="stars">★★★★★</span>
+        <blockquote>Llevo a mis hijos desde pequeños y siempre hemos recibido una atención excelente. Un equipo profesional y cercano de verdad. No cambiaría de clínica.</blockquote>
+        <div class="test-author">
+          <div class="author-av">CR</div>
+          <div class="author-info">
+            <strong>Carmen R.</strong>
+            <span>Paciente · Odontopediatría</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="test-card reveal d1">
+        <span class="quote-mark">"</span>
+        <span class="stars">★★★★★</span>
+        <blockquote>1ª visita con la Dra. Carolina Gacén. Trato super agradable y profesional. Supo dar solución a mis problemas bucales de forma rápida y eficiente. Relación calidad-precio super recomendable. Precios razonables. Volveré para realizarme varios tratamientos.</blockquote>
+        <div class="test-author">
+          <div class="author-av">LA</div>
+          <div class="author-info">
+            <strong>Lucila Aparicio</strong>
+            <span>Reseña en Google Maps</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="test-card reveal d2">
+        <span class="quote-mark">"</span>
+        <span class="stars">★★★★★</span>
+        <blockquote>Llegué con muchísimo miedo al dentista después de varias malas experiencias. Gracias a Carol, todo eso empezó a cambiar. Ha ido salvando piezas con una profesionalidad increíble. Es sincera, clara y te explica todo tal cual es. Me ha hecho perder el miedo al dentista. Y eso no tiene precio.</blockquote>
+        <div class="test-author">
+          <div class="author-av">G</div>
+          <div class="author-info">
+            <strong>Paciente de Google</strong>
+            <span>Reseña en Google Maps</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="test-card reveal d3">
+        <span class="quote-mark">"</span>
+        <span class="stars">★★★★★</span>
+        <blockquote>Encantada con el trato. Carol, una gran profesional que te explica al detalle cada proceso. Con empatía y delicadeza, transmite una gran confianza. ¡Es un 10! Recomendable 100%.</blockquote>
+        <div class="test-author">
+          <div class="author-av">YS</div>
+          <div class="author-info">
+            <strong>Yolanda Sánchez</strong>
+            <span>Reseña en Google Maps</span>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
@@ -1012,15 +872,9 @@ footer{
             <textarea name="mensaje" placeholder="Cuéntanos en qué podemos ayudarte..."></textarea>
           </div>
         </div>
-        <button class="btn-submit" type="submit"><span>Solicitar Cita</span></button>
-        <div id="formError" class="form-error" role="alert" aria-live="assertive"></div>
-        </form>
-        <div id="formSuccess" class="form-status" role="status" aria-live="polite">
-          <div class="form-status-icon">✓</div>
-          <h3>¡Solicitud enviada correctamente!</h3>
-          <p>Hemos recibido tu petición de cita. Nos pondremos en contacto contigo lo antes posible para confirmar el día y la hora.</p>
-          <a href="https://wa.me/34610830742" class="btn-whatsapp" target="_blank" rel="noopener">Contactar por WhatsApp</a>
         </div>
+        <button class="btn-submit" type="submit"><span>Solicitar Cita</span></button>
+        </form>
         <a href="https://wa.me/34610830742" class="btn-whatsapp" target="_blank">
           <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
           Contactar por WhatsApp
@@ -1084,92 +938,28 @@ document.querySelector('.hamburger').addEventListener('click', function() {
   }
 });
 
-// Carrusel de reseñas
-(function initReviewsCarousel(){
-  const carousel=document.getElementById('reviewsCarousel');
-  if(!carousel) return;
-  const track=carousel.querySelector('.reviews-track');
-  const slides=[...carousel.querySelectorAll('.review-slide')];
-  const prev=carousel.querySelector('.carousel-prev');
-  const next=carousel.querySelector('.carousel-next');
-  const dotsWrap=carousel.querySelector('.carousel-dots');
-  let page=0, timer;
-
-  const perPage=()=>window.innerWidth<=768?1:(window.innerWidth<=1024?2:3);
-  const pages=()=>Math.ceil(slides.length/perPage());
-
-  function buildDots(){
-    dotsWrap.innerHTML='';
-    for(let i=0;i<pages();i++){
-      const dot=document.createElement('button');
-      dot.className='carousel-dot'; dot.type='button'; dot.setAttribute('aria-label','Ir a la página '+(i+1));
-      dot.addEventListener('click',()=>go(i,true)); dotsWrap.appendChild(dot);
-    }
-  }
-  function render(){
-    page=Math.min(page,pages()-1);
-    track.style.transform=`translateX(-${page*100}%)`;
-    [...dotsWrap.children].forEach((d,i)=>d.classList.toggle('active',i===page));
-  }
-  function go(newPage,userAction=false){
-    page=(newPage+pages())%pages(); render(); if(userAction) restart();
-  }
-  function restart(){clearInterval(timer);timer=setInterval(()=>go(page+1),6000)}
-  prev.addEventListener('click',()=>go(page-1,true));
-  next.addEventListener('click',()=>go(page+1,true));
-  carousel.addEventListener('mouseenter',()=>clearInterval(timer));
-  carousel.addEventListener('mouseleave',restart);
-  carousel.addEventListener('focusin',()=>clearInterval(timer));
-  carousel.addEventListener('focusout',restart);
-  window.addEventListener('resize',()=>{buildDots();page=0;render();restart()});
-  buildDots();render();restart();
-
-  carousel.querySelectorAll('.review-more').forEach(btn=>{
-    const quote=btn.previousElementSibling;
-    requestAnimationFrame(()=>{if(quote.scrollHeight<=quote.clientHeight+2) btn.style.display='none'});
-    btn.addEventListener('click',()=>{
-      const expanded=quote.classList.toggle('expanded');
-      btn.textContent=expanded?'Ver menos':'Leer reseña completa';
-      btn.setAttribute('aria-expanded',String(expanded));
-    });
-  });
-})();
-
 function handleSubmit(e, form) {
   e.preventDefault();
-
   const btn = form.querySelector('.btn-submit');
-  const btnText = btn.querySelector('span');
-  const errorBox = document.getElementById('formError');
-  const successBox = document.getElementById('formSuccess');
   const data = new FormData(form);
   const params = new URLSearchParams();
+  for (const [k, v] of data.entries()) params.append(k, v);
 
-  for (const [key, value] of data.entries()) {
-    params.append(key, value);
-  }
-
-  errorBox.classList.remove('show');
-  errorBox.textContent = '';
   btn.disabled = true;
-  btnText.textContent = 'Enviando...';
+  btn.querySelector('span').textContent = 'Enviando...';
 
-  fetch('https://hook.eu1.make.com/s2qmlulthesa9hyfsxq19jdf8r5y6gfr?' + params.toString(), {
-    method: 'GET',
-    mode: 'no-cors',
-    cache: 'no-store'
-  })
+  fetch('https://hook.eu1.make.com/s2qmlulthesa9hyfsxq19jdf8r5y6gfr?' + params.toString())
     .then(() => {
-      form.reset();
       form.style.display = 'none';
-      successBox.classList.add('show');
-      successBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      const msg = document.createElement('div');
+      msg.style.cssText = 'padding:40px 20px;text-align:center;';
+      msg.innerHTML = '<div style="font-size:48px;margin-bottom:16px;">✓</div><div style="font-family:\'Cormorant Garamond\',serif;font-size:24px;color:var(--charcoal);margin-bottom:12px;">¡Solicitud recibida!</div><p style="font-size:14px;color:var(--muted);line-height:1.7;">Nos pondremos en contacto contigo en breve para confirmar tu cita.</p>';
+      form.parentNode.insertBefore(msg, form);
     })
     .catch(() => {
       btn.disabled = false;
-      btnText.textContent = 'Solicitar Cita';
-      errorBox.textContent = 'No hemos podido confirmar el envío. Inténtalo de nuevo o contacta con nosotros por WhatsApp.';
-      errorBox.classList.add('show');
+      btn.querySelector('span').textContent = 'Solicitar Cita';
+      alert('Ha ocurrido un error. Por favor inténtalo de nuevo.');
     });
 }
 </script>
