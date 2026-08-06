@@ -1161,7 +1161,7 @@ function handleSubmit(e, form) {
   }
 
   grecaptcha.enterprise.ready(function () {
-    grecaptcha.execute(RECAPTCHA_SITE_KEY, { action: 'submit_form' }).then(function (token) {
+    grecaptcha.grecaptcha.enterprise.execute(RECAPTCHA_SITE_KEY, { action: 'submit_form' }).then(function (token) {
       const data = new FormData(form);
       const params = new URLSearchParams();
 
