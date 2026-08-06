@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Gacén & Serra Dental</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
-<script src="https://www.google.com/recaptcha/api.js?render=6LfpHXktAAAAABHjiSRQSIo4--FM2FQmBM6zJr4x"></script>
+<script src="https://www.google.com/recaptcha/enterprise.js?render=6LfpHXktAAAAABHjiSRQSIo4--FM2FQmBM6zJr4x"></script>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
@@ -1160,7 +1160,7 @@ function handleSubmit(e, form) {
     return;
   }
 
-  grecaptcha.ready(function () {
+  grecaptcha.enterprise.ready(function () {
     grecaptcha.execute(RECAPTCHA_SITE_KEY, { action: 'submit_form' }).then(function (token) {
       const data = new FormData(form);
       const params = new URLSearchParams();
