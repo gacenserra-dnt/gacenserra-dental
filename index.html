@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Gacén & Serra Dental</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<script src="https://www.google.com/recaptcha/api.js?render=6LfH_nMtAAAAAF62WJnFNwFIgJhDXkE-t-UTzCHp"></script>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
@@ -344,7 +345,7 @@ section{padding:110px 0}
 }
 .google-badge{
   position:absolute;top:20px;right:20px;display:inline-flex;align-items:center;gap:5px;
-  padding:6px 8px;background:var(--cream);border:1px solid rgba(184,154,74,.18);
+padding:6px 8px;background:var(--cream);border:1px solid rgba(184,154,74,.18);
   border-radius:20px;font-size:8px;font-weight:500;letter-spacing:1px;text-transform:uppercase;color:var(--muted);
 }
 .google-g{font-weight:600;font-size:12px;color:var(--gold)}
@@ -524,9 +525,8 @@ footer{
 @keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
 @-webkit-keyframes fadeIn{from{opacity:0}to{opacity:1}}
 @keyframes fadeIn{from{opacity:0}to{opacity:1}}
-/* Por defecto los .reveal son VISIBLES. Solo se ocultan si el JS confirma que puede animarlos (clase .js en <html>). Así, si algo falla en el JS, el contenido nunca desaparece. */
-.js .reveal{opacity:0;-webkit-transform:translateY(28px);transform:translateY(28px);-webkit-transition:opacity .7s ease,-webkit-transform .7s ease;transition:opacity .7s ease,transform .7s ease}
-.js .reveal.visible{opacity:1;-webkit-transform:translateY(0);transform:translateY(0)}
+.reveal{opacity:0;-webkit-transform:translateY(28px);transform:translateY(28px);-webkit-transition:opacity .7s ease,-webkit-transform .7s ease;transition:opacity .7s ease,transform .7s ease}
+.reveal.visible{opacity:1;-webkit-transform:translateY(0);transform:translateY(0)}
 .d1{-webkit-transition-delay:.1s;transition-delay:.1s}.d2{-webkit-transition-delay:.2s;transition-delay:.2s}.d3{-webkit-transition-delay:.3s;transition-delay:.3s}
 .d4{-webkit-transition-delay:.4s;transition-delay:.4s}.d5{-webkit-transition-delay:.5s;transition-delay:.5s}
 
@@ -561,7 +561,6 @@ footer{
 </style>
 </head>
 <body>
-<script>document.documentElement.classList.add('js');</script>
 
 <!-- NAV -->
 <nav id="mainNav">
@@ -649,7 +648,7 @@ footer{
     <div class="services-grid">
 
       <div class="service-card reveal d1">
-        <span class="service-num">01</span>
+          <span class="service-num">01</span>
         <svg class="svc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
           <path d="M12 2C8.5 2 6 5 6 8c0 4 2 6 3 10 .5 2 1 4 3 4s3-4 3-4 1 4 3 4 2.5-2 3-4c1-4 3-6 3-10 0-3-2.5-6-6-6z"/>
         </svg>
@@ -898,7 +897,8 @@ footer{
             <span class="google-badge"><span class="google-g">G</span> Google</span>
             <span class="quote-mark">&quot;</span>
             <span class="stars" aria-label="5 estrellas">★★★★★</span>
-            <blockquote class="review-text">Como turista francesa de vacaciones en España, tuve la suerte de descubrir esta clínica dental tras sufrir un problema dental. Pude conseguir cita para el día siguiente, lo cual fue un gran alivio. Todo salió a la perfección. Todo el equipo es encantador, muy profesional e increíblemente delicado. Se nota enseguida que trabajan con gran calma, precisión y amabilidad. ¡No sentí nada durante el tratamiento! Estoy realmente muy contenta de haber encontrado esta clínica dental. Probablemente me salvaron el resto de las vacaciones y evitaron que terminara mi viaje con un fuerte dolor de muelas. Muchísimas gracias a todo el equipo por su cálida bienvenida, su amabilidad y la calidad de su atención. Les deseo mucho éxito con su nueva clínica; ¡se lo merecen! ¡Gracias de nuevo y mis mejores deseos para todo el equipo!</blockquote>
+            <blockquote class="review-text">Como turista francesa de vacaciones en España, tuve la suerte de descubrir esta clínica dental tras sufrir un problema dental.
+              Pude conseguir cita para el día siguiente, lo cual fue un gran alivio. Todo salió a la perfección. Todo el equipo es encantador, muy profesional e increíblemente delicado. Se nota enseguida que trabajan con gran calma, precisión y amabilidad. ¡No sentí nada durante el tratamiento! Estoy realmente muy contenta de haber encontrado esta clínica dental. Probablemente me salvaron el resto de las vacaciones y evitaron que terminara mi viaje con un fuerte dolor de muelas. Muchísimas gracias a todo el equipo por su cálida bienvenida, su amabilidad y la calidad de su atención. Les deseo mucho éxito con su nueva clínica; ¡se lo merecen! ¡Gracias de nuevo y mis mejores deseos para todo el equipo!</blockquote>
             <button class="review-more" type="button" aria-expanded="false">Leer reseña completa</button>
             <div class="test-author">
               <div class="author-av">PF</div>
@@ -1058,8 +1058,6 @@ if ('IntersectionObserver' in window) {
   // Fallback: show all elements immediately
   reveals.forEach(r => r.classList.add('visible'));
 }
-// Red de seguridad: si por lo que sea el observer no ha disparado, forzamos visibilidad a los 2s
-setTimeout(() => { reveals.forEach(r => r.classList.add('visible')); }, 2000);
 
 // Nav scroll effect
 window.addEventListener('scroll', () => {
@@ -1139,6 +1137,8 @@ document.querySelector('.hamburger').addEventListener('click', function() {
   });
 })();
 
+const RECAPTCHA_SITE_KEY = '6LfH_nMtAAAAAF62WJnFNwFIgJhDXkE-t-UTzCHp';
+
 function handleSubmit(e, form) {
   e.preventDefault();
 
@@ -1146,36 +1146,55 @@ function handleSubmit(e, form) {
   const btnText = btn.querySelector('span');
   const errorBox = document.getElementById('formError');
   const successBox = document.getElementById('formSuccess');
-  const data = new FormData(form);
-  const params = new URLSearchParams();
-
-  for (const [key, value] of data.entries()) {
-    params.append(key, value);
-  }
 
   errorBox.classList.remove('show');
   errorBox.textContent = '';
   btn.disabled = true;
   btnText.textContent = 'Enviando...';
 
-  fetch('https://hook.eu1.make.com/s2qmlulthesa9hyfsxq19jdf8r5y6gfr?' + params.toString(), {
-    method: 'GET',
-    mode: 'no-cors',
-    cache: 'no-store'
-  })
-    .then(() => {
-      form.reset();
-      form.style.display = 'none';
-      successBox.classList.add('show');
-      successBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    })
-    .catch(() => {
+  if (typeof grecaptcha === 'undefined') {
+    btn.disabled = false;
+    btnText.textContent = 'Solicitar Cita';
+    errorBox.textContent = 'No se pudo cargar la verificación de seguridad. Recarga la página e inténtalo de nuevo.';
+    errorBox.classList.add('show');
+    return;
+  }
+
+  grecaptcha.ready(function () {
+    grecaptcha.execute(RECAPTCHA_SITE_KEY, { action: 'submit_form' }).then(function (token) {
+      const data = new FormData(form);
+      const params = new URLSearchParams();
+
+      for (const [key, value] of data.entries()) {
+        params.append(key, value);
+      }
+      params.append('g-recaptcha-response', token);
+
+      fetch('https://hook.eu1.make.com/s2qmlulthesa9hyfsxq19jdf8r5y6gfr?' + params.toString(), {
+        method: 'GET',
+        mode: 'no-cors',
+        cache: 'no-store'
+      })
+        .then(() => {
+          form.reset();
+          form.style.display = 'none';
+          successBox.classList.add('show');
+          successBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        })
+        .catch(() => {
+          btn.disabled = false;
+          btnText.textContent = 'Solicitar Cita';
+          errorBox.textContent = 'No hemos podido confirmar el envío. Inténtalo de nuevo o contacta con nosotros por WhatsApp.';
+          errorBox.classList.add('show');
+        });
+    }).catch(function () {
       btn.disabled = false;
       btnText.textContent = 'Solicitar Cita';
-      errorBox.textContent = 'No hemos podido confirmar el envío. Inténtalo de nuevo o contacta con nosotros por WhatsApp.';
+      errorBox.textContent = 'No hemos podido verificar el formulario. Inténtalo de nuevo.';
       errorBox.classList.add('show');
     });
+  });
 }
 </script>
 </body>
-  </html>
+        </html>
