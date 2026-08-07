@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Gacén & Serra Dental</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
-<script src="https://www.google.com/recaptcha/enterprise.js?render=6LfpHXktAAAAABHjiSRQSIo4--FM2FQmBM6zJr4x"></script>
+<script src="https://www.google.com/recaptcha/api.js?render=6LfH_nMtAAAAAF62WJnFNwFIgJhDXkE-t-UTzCHp"></script>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
@@ -349,7 +349,7 @@ padding:6px 8px;background:var(--cream);border:1px solid rgba(184,154,74,.18);
   border-radius:20px;font-size:8px;font-weight:500;letter-spacing:1px;text-transform:uppercase;color:var(--muted);
 }
 .google-g{font-weight:600;font-size:12px;color:var(--gold)}
-.quote-mark{
+  .quote-mark{
   font-family:'Cormorant Garamond',serif;font-size:64px;font-weight:300;
   color:var(--gold);line-height:.5;margin-bottom:22px;display:block;opacity:.3;
 }
@@ -651,7 +651,7 @@ footer{
           <span class="service-num">01</span>
         <svg class="svc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
           <path d="M12 2C8.5 2 6 5 6 8c0 4 2 6 3 10 .5 2 1 4 3 4s3-4 3-4 1 4 3 4 2.5-2 3-4c1-4 3-6 3-10 0-3-2.5-6-6-6z"/>
-        </svg>
+                  </svg>
         <h3>Odontología General</h3>
         <p>Revisiones, limpiezas y tratamientos preventivos para mantener tu salud bucodental en perfectas condiciones.</p>
         <span class="svc-arrow">→</span>
@@ -897,7 +897,7 @@ footer{
             <span class="google-badge"><span class="google-g">G</span> Google</span>
             <span class="quote-mark">&quot;</span>
             <span class="stars" aria-label="5 estrellas">★★★★★</span>
-            <blockquote class="review-text">Como turista francesa de vacaciones en España, tuve la suerte de descubrir esta clínica dental tras sufrir un problema dental.
+                      <blockquote class="review-text">Como turista francesa de vacaciones en España, tuve la suerte de descubrir esta clínica dental tras sufrir un problema dental.
               Pude conseguir cita para el día siguiente, lo cual fue un gran alivio. Todo salió a la perfección. Todo el equipo es encantador, muy profesional e increíblemente delicado. Se nota enseguida que trabajan con gran calma, precisión y amabilidad. ¡No sentí nada durante el tratamiento! Estoy realmente muy contenta de haber encontrado esta clínica dental. Probablemente me salvaron el resto de las vacaciones y evitaron que terminara mi viaje con un fuerte dolor de muelas. Muchísimas gracias a todo el equipo por su cálida bienvenida, su amabilidad y la calidad de su atención. Les deseo mucho éxito con su nueva clínica; ¡se lo merecen! ¡Gracias de nuevo y mis mejores deseos para todo el equipo!</blockquote>
             <button class="review-more" type="button" aria-expanded="false">Leer reseña completa</button>
             <div class="test-author">
@@ -1137,7 +1137,7 @@ document.querySelector('.hamburger').addEventListener('click', function() {
   });
 })();
 
-const RECAPTCHA_SITE_KEY = '6LfpHXktAAAAABHjiSRQSIo4--FM2FQmBM6zJr4x';
+const RECAPTCHA_SITE_KEY = '6LfH_nMtAAAAAF62WJnFNwFIgJhDXkE-t-UTzCHp';
 
 function handleSubmit(e, form) {
   e.preventDefault();
@@ -1160,8 +1160,8 @@ function handleSubmit(e, form) {
     return;
   }
 
-  grecaptcha.enterprise.ready(function () {
-    grecaptcha.enterprise.execute(RECAPTCHA_SITE_KEY, { action: 'submit_form' }).then(function (token) {
+  grecaptcha.ready(function () {
+    grecaptcha.execute(RECAPTCHA_SITE_KEY, { action: 'submit_form' }).then(function (token) {
       const data = new FormData(form);
       const params = new URLSearchParams();
 
